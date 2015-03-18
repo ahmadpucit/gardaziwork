@@ -1,0 +1,67 @@
+<%= link_to("Back" , {:action => 'rpage'}) %>
+
+
+
+
+<%= form_for(:request , :url => {:action => 'servicecreate'}) do |f| %>
+
+
+
+  
+
+  <div class="field">
+    <%= f.label :when %><br>
+    <%= f.text_field :when %>
+    
+  </div>
+
+    <div class="field">
+    <%= f.label :where %><br>
+    <%= f.text_field :where %>
+    
+  </div>
+
+<div class="field">
+    <%= f.label :product_where %><br>
+    <%= f.text_field :product_where %>
+    
+  </div>
+
+  <div class="field">
+    <%= f.label :what %><br>
+    <%= f.text_field :what %>
+  </div>
+
+  <%= f.select :category, @categories %>
+
+   <!--<div class="field">
+    <%= f.label :negotiable %><br>
+    <%= f.text_field :negotiable %>
+  </div>-->
+
+  <div class="field">
+    <%= f.radio_button :status, "Yes" %>
+    <%= f.label :status, "Yes", :value => "Yes" %>
+    <%= f.radio_button :status, "No" %>
+    <%= f.label :status, "No", :value => "No" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Upper_price_range %><br>
+    <%= f.text_field :Upper_price_range %>
+  </div>
+
+    <div class="field">
+    <%= f.label :lower_price_range %><br>
+    <%= f.text_field :lower_price_range %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tags %><br>
+    <%= f.text_field :tags %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

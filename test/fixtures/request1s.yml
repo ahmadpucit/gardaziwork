@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  when: 
+  where: MyString
+  what: MyString
+  negotiable: 
+  price: 
+
+two:
+  when: 
+  where: MyString
+  what: MyString
+  negotiable: 
+  price: 

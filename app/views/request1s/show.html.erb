@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>When:</strong>
+  <%= @request1.when %>
+</p>
+
+<p>
+  <strong>Where:</strong>
+  <%= @request1.where %>
+</p>
+
+<p>
+  <strong>What:</strong>
+  <%= @request1.what %>
+</p>
+
+<p>
+  <strong>Negotiable:</strong>
+  <%= @request1.negotiable %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @request1.price %>
+</p>
+
+<%= link_to 'Edit', edit_request1_path(@request1) %> |
+<%= link_to 'Back', request1s_path %>

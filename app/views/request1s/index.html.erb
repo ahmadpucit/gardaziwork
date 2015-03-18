@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Request1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>When</th>
+      <th>Where</th>
+      <th>What</th>
+      <th>Negotiable</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @request1s.each do |request1| %>
+      <tr>
+        <td><%= request1.when %></td>
+        <td><%= request1.where %></td>
+        <td><%= request1.what %></td>
+        <td><%= request1.negotiable %></td>
+        <td><%= request1.price %></td>
+        <td><%= link_to 'Show', request1 %></td>
+        <td><%= link_to 'Edit', edit_request1_path(request1) %></td>
+        <td><%= link_to 'Destroy', request1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Request1', new_request1_path %>

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Requests</h1>
+
+<!--<%= link_to("Add A new request" , {:action => 'new'} ) %>-->
+
+<table>
+  <thead>
+    <tr>
+      <th>When</th>
+      <th>Where</th>
+      <th>Product Locaition</th>
+      <th>Reference Location</th>
+      <th>What</th>
+      <th>Negotiable</th>
+      <th>Upper Price</th>
+      <th>Lower Price</th>
+      <th>Type</th>
+      <th>Category</th>
+      <th>tags</th>
+      <th>Negotiable</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requests.each do |article| %>
+      <tr>
+        <td><%= article.when %></td>
+        <td><%= article.where %></td>
+        <td><%= article.product_where %></td>
+        <td><%= article.reference_location %></td>
+        <td><%= article.what %></td>
+        <td><%= article.negotiable %></td>
+        <td><%= article.Upper_price_range %></td>
+        <td><%= article.lower_price_range %></td>
+        <td><%= article.typee %></td>
+        <td><%= article.category %></td>
+        <td><%= article.tags %></td>
+        <td><%= article.status %></td>
+        <td><%= link_to 'Show', '#' %></td>
+        <td><%= link_to 'Edit', '#' %></td>
+        <td><%= link_to 'Destroy', '#' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', 'new' %>
